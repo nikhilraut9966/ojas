@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ojas Fintech</title>
+
+<link rel="stylesheet" href="index.css">
+<script defer src="script.js"></script>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <div class="logo">
+        <img src="images/logo.png" alt="Ojas Logo">
+        <h2>Ojas Fintech</h2>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <li class="dropdown">
+                <a href="#">Insurance ▾</a>
+                <div class="dropdown-content">
+                    <a href="life-insurance.html">Life Insurance</a>
+                    <a href="health-insurance.html">Health Insurance</a>
+                    <a href="vehicle-insurance.html">Vehicle Insurance</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Loans ▾</a>
+                <div class="dropdown-content">
+                    <a href="home-loan.html">Home Loan</a>
+                    <a href="personal-loan.html">Personal Loan</a>
+                    <a href="business-loan.html">Business Loan</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Mutual Funds ▾</a>
+                <div class="dropdown-content">
+                    <a href="sip.html">SIP Investment</a>
+                    <a href="equity.html">Equity Funds</a>
+                    <a href="hybrid.html">Hybrid Funds</a>
+                </div>
+            </li>
+
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+    <img src="images/Hero.png" alt="Hero Image" class="hero-img">
+    
+</section>
+
+
+
+<!-- ABOUT — single framed card with logo + symbols -->
+<section class="about-block">
+ <div class="about-split">
+
+    <!-- LEFT: Symbols / features column -->
+    <div class="symbols-column">
+      <div class="symbol">
+        <div class="symbol-icon icon-1">🏦</div>
+        <div>
+          <div class="symbol-title">Trusted Partners</div>
+          <div class="symbol-sub">Banks & Insurers we work with</div>
+        </div>
+      </div>
+
+      <div class="symbol">
+        <div class="symbol-icon icon-2">⭐</div>
+        <div>
+          <div class="symbol-title">Customer-first</div>
+          <div class="symbol-sub">Transparent advice & service</div>
+        </div>
+      </div>
+
+      <div class="symbol">
+        <div class="symbol-icon icon-3">🔒</div>
+        <div>
+          <div class="symbol-title">Safe & Compliant</div>
+          <div class="symbol-sub">Licensed advisors, secure process</div>
+        </div>
+      </div>
+
+      <div class="symbol">
+        <div class="symbol-icon icon-4">⚙️</div>
+        <div>
+          <div class="symbol-title">Easy Onboarding</div>
+          <div class="symbol-sub">Digital doc upload & fast approvals</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Full information -->
+    <div class="about-card" role="region" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Ojas Fintech</h2>
+
+      <p>
+        Ojas Fintech provides personalised financial advice and distribution for Insurance, Loans and Investments.
+        We combine experienced advisors with simple digital tools so you get clear product comparisons, honest pricing,
+        and hand-holding through application and claim processes.
+      </p>
+
+      <p>
+        Our mission is to make financial protection and wealth creation accessible — whether you are starting your SIP,
+        buying your first home, or securing your family's future.
+      </p>
+
+      <div class="about-highlights" aria-hidden="false">
+        <div class="highlight">
+          <div class="dot dot-blue">10+</div>
+          <div>
+            <div class="text">Years Experience</div>
+            <div class="sub">Advisory & distribution</div>
+          </div>
+        </div>
+
+        <div class="highlight">
+          <div class="dot dot-gold">5k+</div>
+          <div>
+            <div class="text">Happy Customers</div>
+            <div class="sub">Across India</div>
+          </div>
+        </div>
+
+        <div class="highlight">
+          <div class="dot dot-green">20</div>
+          <div>
+            <div class="text">Licensed Advisors</div>
+            <div class="sub">Certified & trained</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-footer">
+        <div>
+          <a href="contact.html" class="cta">Get a free consultation</a>
+          
+        </div>
+
+        <img src="images/logo.png" alt="Ojas Fintech logo" class="about-logo" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Our Partners Section -->
+<section class="py-5" style="background: linear-gradient(135deg, #ff9933, #ffffff, #138808);">
+  <div class="container">
+    <h2 class="text-center mb-5" style="font-weight:bold; color:#000; position:relative; display:inline-block;">
+      Our Partners
+      <span style="display:block; width:60px; height:3px; background:#000; margin:8px auto 0; border-radius:2px;"></span>
+    </h2>
+
+    <!-- Slider Wrapper -->
+    <div class="partners-slider">
+      <div class="partners-track">
+        <div class="partner"><img src="images/logo.jpeg" alt="Ptrans & Controls"></div>
+        <div class="partner"><img src="images/ptc.png" alt="Reet Technologies"></div>
+        <div class="partner"><img src="images/two8.png" alt="ULA"></div>
+        <div class="partner"><img src="images/reet.png" alt="Two8 Digital"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- APPOINTMENT -->
+<section class="appointment">
+    <h2>Book Your Free Consultation</h2>
+
+    <form action="https://formsubmit.co/b6a1fa6d00035fd8ed11dc06900cb481" method="POST">
+
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="text" name="mobile" placeholder="Mobile Number" required>
+
+    <!-- Redirect after submit -->
+    <input type="hidden" name="_next" value="https://ridtechsolution.com/thankyou.html">
+
+    <button type="submit">Book Now</button>
+</form>
+
+</section>
+
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/918788393728" class="whatsapp">WhatsApp</a>
+
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-box">
+        <h3>Address</h3>
+        <p>Ojas Fintech<br>Near Katraj Dmart, Pune<br>Maharashtra, India – 411044</p>
+    </div>
+
+    <div class="footer-box">
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Privacy Policy</a>
+    </div>
+
+     <div class="footer-box">
+        <h3>Contact</h3>
+        <p>📞 +91 8788393728</p>
+        <p>📧 ojasfintech@gmail.com</p>
+        <p>Follow Us:<br>
+        Facebook | Instagram | LinkedIn | YouTube</p>
+    </div>
+</footer>
+
+
+
+</body>
+</html>

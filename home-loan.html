@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Life Insurance – Ojas Fintech</title>
+
+  <!-- point to your CSS -->
+  <link rel="stylesheet" href="life-insurence.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html" class="logo-link">
+          <!-- uploaded logo path -->
+          <img src="images/logo.png"Ojas Fintech logo" class="logo-img">
+          <span class="brand-text">Ojas Fintech</span>
+        </a>
+      </div>
+
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+
+          <li class="nav-item has-dropdown">
+            <a href="#" class="nav-link">Insurance ▾</a>
+            <div class="dropdown">
+              <a href="life-insurance.html">Life Insurance</a>
+              <a href="health-insurance.html">Health Insurance</a>
+              <a href="vehicle-insurance.html">Vehicle Insurance</a>
+            </div>
+          </li>
+
+          <li class="nav-item has-dropdown">
+            <a href="#" class="nav-link">Loans ▾</a>
+            <div class="dropdown">
+              <a href="home-loan.html">Home Loan</a>
+              <a href="personal-loan.html">Personal Loan</a>
+              <a href="business-loan.html">Business Loan</a>
+            </div>
+          </li>
+
+          <li class="nav-item has-dropdown">
+            <a href="#" class="nav-link">Mutual Funds ▾</a>
+            <div class="dropdown">
+              <a href="sip.html">SIP Investment</a>
+              <a href="equity.html">Equity Funds</a>
+              <a href="hybrid.html">Hybrid Funds</a>
+            </div>
+          </li>
+
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="btn-contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<!-- HERO -->
+<section class="hero hero-full">
+  <img src="images/Homeloan.png"
+       alt="Home Loan"
+       class="hero-img"
+       loading="eager" decoding="async">
+</section>
+
+<!-- MAIN CONTENT -->
+<main class="container page-main" id="main">
+  <div class="grid-2">
+    
+    <!-- LEFT SIDE CONTENT -->
+    <article class="card main-card">
+      <h2>Why choose a Home Loan?</h2>
+      <p>
+        A home loan helps you purchase your dream home with affordable EMIs.
+        It allows you to own property without paying the full amount upfront, while also
+        gaining tax benefits under Section 80C and 24(b).
+      </p>
+
+      <h3>Key benefits</h3>
+      <ul class="benefits">
+        <li>Low interest rates from top banks & NBFCs</li>
+        <li>Flexible tenure up to 30 years</li>
+        <li>High loan eligibility based on income</li>
+        <li>Balance transfer option for reducing EMI</li>
+        <li>Tax benefits on principal & interest repayment</li>
+      </ul>
+
+      <h3>How we help</h3>
+      <p>
+        We compare offers from multiple lenders and help you choose the lowest interest rate
+        based on your profile. We guide you with documentation, eligibility check,
+        sanction process, and faster disbursal.
+      </p>
+
+      <a class="btn-cta" href="contact.html">Talk to an advisor</a>
+    </article>
+
+    <!-- RIGHT SIDE ASIDE -->
+    <aside class="card aside-card">
+      <h4>Quick facts</h4>
+      <p class="small-muted">A good credit score (750+) can get you the lowest home loan rate.</p>
+
+      <p><strong>Typical interest rates:</strong><br>8.25% – 10.50% depending on income & credit profile.</p>
+
+      <hr>
+
+      <p>📞 +91 8788393728</p>
+      <p>📧 ojasfintech@gmail.com</p>
+    </aside>
+
+  </div>
+</main>
+
+
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/918788393728" class="whatsapp" aria-label="WhatsApp">WhatsApp</a>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-box">
+        <h3>Address</h3>
+        <p>Ojas Fintech<br>Near Katraj Dmart, Pune<br>Maharashtra, India – 411044</p>
+      </div>
+
+      <div class="footer-box">
+        <h3>Quick Links</h3>
+        <nav aria-label="Footer links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="#">Privacy Policy</a>
+        </nav>
+      </div>
+
+      <div class="footer-box">
+        <h3>Contact</h3>
+        <p>📞 +91 8788393728</p>
+        <p>📧 ojasfintech@gmail.com</p>
+        <p class="follow">Follow Us:<br>
+        Facebook | Instagram | LinkedIn | YouTube</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom container">
+      <small>© <span id="year"></span> Ojas Fintech — All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script>
+    // mobile nav toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const siteNav = document.getElementById('site-nav');
+    navToggle.addEventListener('click', () => {
+      siteNav.classList.toggle('open');
+    });
+
+    // close dropdowns on outside click (mobile-friendly)
+    document.addEventListener('click', (e) => {
+      const isDropdownLink = e.target.closest('.has-dropdown');
+      if (!isDropdownLink) {
+        document.querySelectorAll('.has-dropdown.open').forEach(el => el.classList.remove('open'));
+      }
+    });
+
+    // add year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // make dropdowns toggle on small screens
+    document.querySelectorAll('.has-dropdown > .nav-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 900) {
+          e.preventDefault();
+          const parent = link.parentElement;
+          parent.classList.toggle('open');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

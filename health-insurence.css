@@ -1,0 +1,271 @@
+/* ---------------------------
+   GLOBAL / VARIABLES / RESET
+--------------------------- */
+:root{
+  --blue: #0b4f7a;
+  --gold: #d89b2b;
+  --muted: #666;
+  --card-bg: #fff;
+  --gradient: linear-gradient(90deg,var(--blue),#24688f);
+  --max-width: 1200px;
+}
+
+/* reset */
+*{ box-sizing: border-box; }
+html,body{ margin:0; padding:0; font-family: "Segoe UI", Arial, sans-serif; color:#222; background:#fafafa; -webkit-font-smoothing:antialiased; }
+a{ color:var(--blue); text-decoration:none; }
+.container{ width:90%; max-width:var(--max-width); margin:0 auto; }
+
+/* ---------------------------
+   HEADER (Same as Home Page)
+--------------------------- */
+.site-header{
+  background: linear-gradient(90deg, #002D62, #6D8C0C);
+  padding: 12px 0;
+  position: sticky;
+  top:0;
+  z-index:100;
+}
+
+.header-inner{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+.logo-img{
+  width:55px;
+  height:auto;
+}
+
+.brand-text{
+  color:#FFD966;
+  font-size:22px;
+  font-weight:700;
+}
+
+/* nav */
+.nav-list{
+  list-style:none;
+  display:flex;
+  gap:25px;
+  margin:0;
+  padding:0;
+  align-items:center;
+}
+.nav-list li{ position:relative; }
+.nav-list a{
+  color:white;
+  text-decoration:none;
+  font-size:16px;
+  font-weight:600;
+  padding:8px 10px;
+  border-radius:6px;
+}
+.nav-list a:hover{ color:#FFD966; background:rgba(255,255,255,0.03); }
+
+/* contact button style in nav */
+.btn-contact{
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.12);
+  padding:8px 12px;
+  border-radius:8px;
+  color:#fff !important;
+}
+
+/* dropdowns (desktop) */
+.has-dropdown .dropdown{
+  display:none;
+  position:absolute;
+  left:0;
+  top:calc(100% + 8px);
+  min-width:220px;
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.18);
+  padding:8px 0;
+  flex-direction:column;
+}
+.has-dropdown:hover .dropdown{ display:flex; }
+.dropdown a{ padding:10px 16px; border-radius:6px; font-weight:500; color:#0b3b59; display:block; white-space:nowrap; }
+.dropdown a:hover{ background:rgba(10,60,90,0.04); }
+
+/* nav toggle (mobile) */
+.nav-toggle{
+  display:none;
+  background:transparent;
+  border:0;
+  font-size:22px;
+  cursor:pointer;
+  color:#fff;
+}
+
+/* ---------------------------
+   HERO SECTION (no-crop)
+--------------------------- */
+/* prevent horizontal scroll when using full-bleed */
+body { overflow-x: hidden; }
+
+/* FULL-BLEED HERO (covers entire browser width) */
+.hero {
+  width: 100vw; /* full viewport width */
+  margin-left: calc(50% - 50vw); /* center the full-bleed box */
+  margin-right: calc(50% - 50vw);
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  /* optional thin border under header — remove if you don't want it */
+  border-top: 4px solid #eaeaea;
+  border-bottom: 0;
+  box-sizing: border-box;
+}
+
+/* image fills the hero area, preserves aspect visually (will crop vertically) */
+.hero-img {
+  display: block;
+  width: 100%;
+  height: 520px;         /* change height to taste (px or use min-height) */
+  max-height: 80vh;      /* prevents the hero becoming huge on tall screens */
+  object-fit: cover;     /* fills entire width/height (can crop) */
+  object-position: center;
+}
+
+
+/* ---------------------------
+   Main content grid + cards
+   --------------------------- */
+main{ margin-top:32px; margin-bottom:40px; }
+.grid-2{
+  display:grid;
+  grid-template-columns: 1fr 360px;
+  gap:28px;
+  align-items:start;
+}
+
+/* cards */
+.card{
+  background:var(--card-bg);
+  padding:22px;
+  border-radius:12px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.06);
+  border:1px solid rgba(0,0,0,0.03);
+}
+.main-card h2{ color:#FFD966; margin-bottom:12px; font-size:26px; font-weight:900; }
+.benefits{ margin-top:8px; color:#444; line-height:1.8; }
+
+/* CTA */
+.btn-cta{
+  display:inline-block;
+  margin-top:16px;
+  background:linear-gradient(90deg,#f6b24e,#c69014);
+  color:#fff;
+  padding:12px 18px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:800;
+}
+
+/* aside small text */
+.small-muted{ color:var(--muted); font-size:14px; }
+
+/* ---------------------------
+   Whatsapp floating button
+   --------------------------- */
+.whatsapp{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  background:#25D366;
+  color:#fff;
+  padding:12px 14px;
+  border-radius:28px;
+  text-decoration:none;
+  box-shadow:0 8px 20px rgba(0,0,0,0.12);
+  font-weight:700;
+  z-index:60;
+}
+
+/* ---------------------------
+   FOOTER (Same as Home Page)
+--------------------------- */
+.site-footer{
+  background:#444;
+  color:white;
+  padding:40px 0 20px;
+  margin-top:40px;
+  border-top:5px solid #C9A227;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:30px;
+  align-items:start;
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+  padding-bottom:18px;
+}
+
+.footer-box h3{
+  margin-top:0;
+  color:#FFD966;
+}
+
+.footer-box a{
+  display:block;
+  margin:6px 0;
+  color:white;
+  text-decoration:none;
+}
+
+.footer-box a:hover{
+  color:#FFD966;
+}
+
+.footer-bottom{
+  text-align:center;
+  margin-top:20px;
+  color:#DDD;
+}
+
+/* ---------------------------
+   Responsive
+--------------------------- */
+@media (max-width:1100px){
+  .grid-2{ grid-template-columns: 1fr 320px; }
+  .logo-img{ width:56px; }
+}
+
+@media (max-width:900px){
+  .nav-list{ flex-direction:column; gap:0; background:transparent; padding:12px; display:none; width:100%; }
+  .site-nav.open .nav-list{ display:flex; background:transparent; box-shadow:none; border-radius:10px; }
+  .nav-list a{ padding:12px 16px; border-radius:6px; color:#fff; }
+  .nav-toggle{ display:block; }
+
+  .header-inner{ align-items:center; }
+
+  /* dropdowns become accordion-like on mobile */
+  .has-dropdown .dropdown{
+    position:relative;
+    top:0;
+    left:0;
+    box-shadow:none;
+    padding-left:14px;
+    display:none;
+  }
+  .has-dropdown.open .dropdown{ display:flex; flex-direction:column; background:#fff; color:#333; }
+
+  .footer-grid{ grid-template-columns: 1fr; }
+  .grid-2{ grid-template-columns: 1fr; }
+}
+
+/* small devices */
+@media (max-width:480px){
+  .brand-text{ font-size:18px; }
+  .logo-img{ width:48px; }
+  .btn-cta{ padding:10px 14px; }
+}

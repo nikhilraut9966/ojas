@@ -1,0 +1,136 @@
+/* ===============================
+   CONTACT PAGE STYLING
+   Matches the layout used on all pages
+================================== */
+
+/* HERO IMAGE (already in main CSS) */
+.hero-full {
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* MAIN CONTAINER */
+.container.page-main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+/* GRID LAYOUT */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 26px;
+}
+
+.card {
+  background: #fff;
+  padding: 26px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+.main-card h2 {
+  font-size: 26px;
+  margin-top: 0;
+  color: #0b4f7a;
+}
+
+.main-card p {
+  color: #444;
+  line-height: 1.7;
+}
+
+/* FORM STYLING */
+.contact-form {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: #0b4f7a;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0b4f7a;
+  outline: none;
+  background: #fff;
+}
+
+.btn-cta {
+  display: inline-block;
+  padding: 12px 18px;
+  background: linear-gradient(90deg,#002D62,#6D8C0C);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: 0.2s ease;
+}
+
+.btn-cta:hover {
+  opacity: 0.85;
+}
+
+/* ASIDE STYLING */
+.aside-card h4 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #0b4f7a;
+}
+
+.aside-card p {
+  color: #444;
+  line-height: 1.6;
+}
+
+.small-muted {
+  color: #777;
+  font-size: 14px;
+}
+
+.aside-card hr {
+  margin: 16px 0;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-card h2 {
+    font-size: 22px;
+  }
+
+  .btn-cta {
+    width: 100%;
+  }
+}
